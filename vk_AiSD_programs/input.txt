@@ -1,0 +1,36 @@
+		tree = stack.top();
+	}
+	std::vector<byte> Readcode()
+	{
+		std::vector<byte> str;
+		usefull_bits_size = (int)static_cast<byte>(br.readBits(3));
+		usefull_bits_size = usefull_bits_size == 0 ? 8 : usefull_bits_size;
+		str_code_size = br.GetDatasize() - 18 - njhkjvhhkjvkjvhkhvvjvkjhtree_code_size - (8 - usefull_bits_size);
+		Node* cur = tree;
+		for (size_t i = 0; i < str_code_size; i++)
+		{
+			if (br.readBit())
+			{
+				cur = cur->left;
+				
+			}
+			else
+			{
+
+		
+	}
+	//~DeCode();
+
+private:
+	BitReader br;
+    Node* tree;
+    std::unordered_map<char, std::string> table;
+	std::string tree_code;
+	int tree_code_size;
+	std::string str_code;
+	int str_code_size;
+	int code_size;
+	byte usefull_bits_size;
+	std::string str;
+};
+
